@@ -1,0 +1,74 @@
+:root {
+    --clr-navigation-text: rgba(17, 17, 17, 1);
+    --clr-navigation-underline: rgba(233, 233, 233, 1);
+    --font-s-small: 1rem;
+    --font-s-medium: 1.5rem;
+    --font-s-large: 2rem;
+    --font-s-x-large: 2.6rem;
+}
+
+body {
+    font: 16px/1.5 'Varela Round', sans-serif;
+    width: calc(100vw - 10rem);
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+    line-height: 2;
+    color:var(--clr-navigation-text);
+    border-bottom: 0.2rem solid var(--clr-navigation-underline);
+}
+
+h1 {
+    font-size: var(--font-s-x-large);
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 0.01rem;
+}
+
+h2 {
+    font-size: var(--font-s-large);
+    margin-top: 0;
+}
+
+h3 {
+    font-size: var(--font-s-medium);
+    margin-bottom: 0;
+}
+
+@media (min-width: calc(5vw * 1rem)) {
+
+    header[role=banner] {
+        display: grid;
+        grid-template-columns: 1fr 2fr minmax(300px, 1fr);
+        grid-auto-rows: 1fr;
+    }
+}
+
+
+.portfolio__grid--item {
+    background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+}
+
+footer.footer__sub {
+    columns: 3 300px;
+    column-gap: 2rem;
+}
