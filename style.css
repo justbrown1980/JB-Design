@@ -1,10 +1,43 @@
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-Black.woff2') format('woff2'),
+        url('CircularStd-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('fonts/CircularStd-Bold.woff2') format('woff2'),
+        url('fonts/CircularStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('fonts/CircularStd-Medium.woff2') format('woff2'),
+        url('fonts/CircularStd-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('fonts/CircularStd-Book.woff2') format('woff2'),
+        url('fonts/CircularStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --clr-navigation-text: rgba(17, 17, 17, 1);
     --clr-navigation-underline: rgba(233, 233, 233, 1);
-    --font-s-small: 1rem;
-    --font-s-medium: 1.5rem;
-    --font-s-large: 2rem;
-    --font-s-x-large: 2.6rem;
+    --clr-navigation-underline-active: rgba(233, 233, 233, 0.5);
+    --font-s-small: 1vmin;
+    --font-s-medium: 1.5vmin;
+    --font-s-large: 2vmin;
+    --font-s-x-large: 2.6vmin
 }
 
 body {
@@ -13,8 +46,15 @@ body {
     margin: 0 auto;
 }
 
+
+@media (min-width: 30rem) {
+    body {
+        width: 400px;
+    }
+}
+
 img {
-    max-width: 100%;
+    width: 100%;
 }
 
 ul {
@@ -34,7 +74,15 @@ nav a {
     text-decoration: none;
     line-height: 2;
     color:var(--clr-navigation-text);
+
     border-bottom: 0.2rem solid var(--clr-navigation-underline);
+    transition: 0.2s ease-in-out;
+}
+
+nav a:hover {
+    
+    border-bottom: 0.2rem solid var(--clr-navigation-underline-active);
+    transition: 0.2s ease-in-out;
 }
 
 h1 {
