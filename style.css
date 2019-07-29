@@ -37,7 +37,8 @@
     --font-size: 100%; /* 16px */
     --ratio: 1.333;
 
-    --h5: var(--font-size);
+    
+    --p:  var(--font-size);
     --h4: calc(var(--font-size)*var(--ratio));
     --h3: calc(var(--h4)*var(--ratio));
     --h2: calc(var(--h3)*var(--ratio));
@@ -51,6 +52,10 @@ body {
     font: var(--font-size) 'Varela Round', sans-serif;
     width: calc(100vw - 10rem);
     margin: 0 auto;
+}
+
+p {
+    font-size: var(--font-size);
 }
 
 img {
